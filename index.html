@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>吴师傅 - 东莞虎门树田 专业寄快递</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🚚 吴师傅寄快递</h1>
+      <p>东莞虎门镇树田 | 圆通速递 | 服务贴心 · 上门取件</p >
+    </header>
+
+    <main>
+      <section class="intro">
+        <p><strong>📞 联系电话：18521198443</strong></p >
+        <p>📍 服务区域：东莞市虎门镇树田及周边</p >
+        <p>⏰ 服务时间：早上 9:00 ~ 晚上 11:00</p >
+        <p>🏷️ 主营快递：圆通速递（其他可咨询）</p >
+      </section>
+
+      <div class="buttons">
+        <a href="order.html" class="btn btn-primary">📦 立即下单</a >
+        <a href="contact.html" class="btn btn-secondary">📞 联系我</a >
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>下单 - 吴师傅寄快递</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📦 填写寄件信息</h1>
+    </header>
+
+    <main>
+      <form id="orderForm">
+        <fieldset>
+          <legend>📥 寄件人信息</legend>
+          <input type="text" placeholder="寄件人姓名" required />
+          <input type="tel" placeholder="寄件人电话" required />
+          <input type="text" placeholder="寄件人地址" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>📤 收件人信息</legend>
+          <input type="text" placeholder="收件人姓名" required />
+          <input type="tel" placeholder="收件人电话" required />
+          <input type="text" placeholder="收件人地址" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>📦 包裹信息</legend>
+          <select required>
+            <option value="" disabled selected>选择快递公司</option>
+            <option value="圆通速递" selected>圆通速递</option>
+          </select>
+          <input type="text" placeholder="物品类型（可选）" />
+          <input type="text" placeholder="重量（如：2kg，可选）" />
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">✅ 提交订单</button>
+      </form>
+
+      <div id="orderTip" class="tip" style="display:none;">
+        <p>✅ 订单提交成功！请保持电话畅通，<br>
+           吴师傅（18521198443）将尽快联系您取件。</p >
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('orderForm').onsubmit = function(e) {
+      e.preventDefault();
+      document.getElementById('orderTip').style.display = 'block';
+      this.style.display = 'none';
+    };
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>联系我 - 吴师傅寄快递</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📞 联系吴师傅</h1>
+    </header>
+
+    <main>
+      <div class="contact-info">
+        <p><strong>👤 快递员：吴师傅</strong></p >
+        <p><strong>📞 电话：18521198443</strong>（请直接拨打）</p >
+        <p><strong>📍 服务区域：东莞市虎门镇树田</strong></p >
+        <p><strong>⏰ 服务时间：早上9:00 ~ 晚上11:00</strong></p >
+        <p><strong>🏷️ 主营：圆通速递</strong>（其他快递可咨询）</p >
+        <p><strong>🚚 服务：上门取件 · 价格透明 · 快递代发</strong></p >
+      </div>
+      <br/>
+      <a href="index.html" class="btn btn-secondary">← 返回首页</a >
+    </main>
+  </div>
+</body>
+</html>
+
+/* css/style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
